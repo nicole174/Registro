@@ -1,3 +1,60 @@
+/* Inicia css general*/
+
+.roboto {
+  font-family: 'Roboto Slab', serif;
+  font-weight: bolder;
+  color: white;
+}
+
+.img-user {
+  margin-top: 80px;
+}
+
+.registro {
+  background: #bdc3c7;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.pill {
+  border-radius: 30px;
+}
+
+.error {
+  background: #200122;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #6f0000, #200122);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #6f0000, #200122); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  text-align: center;
+  border-radius: 30px;
+  color: #fff;
+}
+
+.error-w {
+  width: 350px;
+  margin-top: 7px;
+}
+
+.usuarios {
+  margin-top: -80px;
+}
+
+.salir {
+  margin-top: 25px !important;
+}
+
+.formulario {
+  background: #6D6027;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #D3CBB8, #6D6027);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #D3CBB8, #6D6027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+/* Finaliza css general*/
+
+/* Inicia Botones de login */
+
 @import url(https://fonts.googleapis.com/css?family=Roboto:700);
   html, 
   body {
@@ -61,13 +118,13 @@
   box-shadow: 0px 5px 6px rgba(0,0,0,0.3);
 }
 
+/* Finaliza Botones de login */
 
-
-/* Login */
+/* Inicia Login */
 
 .login-box {
   width: 320px;
-  height: 420px;
+  height: auto;
   background: rgba(0, 0, 0, 0.849);
   color: #fff;
   top: 50%;
@@ -75,7 +132,7 @@
   position: absolute;
   transform: translate(-50%, -50%);
   box-sizing: border-box;
-  padding: 70px 30px;
+  padding: 60px 30px 0px 30px;
 }
 
 .login-box .avatar {
@@ -116,19 +173,64 @@
   font-size: 16px;
 }
 
-.roboto {
-  font-family: 'Roboto Slab', serif;
-  font-weight: bolder;
-  color: white;
+/* Finaliza Login */
+
+/* Inicio Botones perzonalizados */
+
+.buttons {
+  text-align: center;
 }
 
-.img-user {
-  margin-top: 80px;
+.btn-hover {
+  width: 125px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 5px;
+  height: 40px;
+  text-align:center;
+  border: none;
+  background-size: 300% 100%;
+
+  border-radius: 50px;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
 }
 
-.card-body {
-  background: #bdc3c7;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+.btn-hover:hover {
+  background-position: 100% 0;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
 }
+
+.btn-hover:focus {
+  outline: none;
+}
+
+.btn-hover.color-7 {
+  background-image: linear-gradient(to right, #6253e1, #852D91, #A3A1FF, #F24645);
+  box-shadow: 0 4px 15px 0 rgba(126, 52, 161, 0.75);
+}
+
+.btn-hover.color-8 {
+  background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
+  box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+}
+
+.btn-hover.color-11 {
+  background-image: linear-gradient(to right, #0c898d, #5e80f1, #4e58e1, #5c37e2);  
+  box-shadow: 0 5px 15px rgba(97, 242, 194, 0.63);
+}
+
+.btn-hover.color-2 {
+  background-image: linear-gradient(to right, #f5ce62, #e43603, #fa7199, #e85a19);
+  box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
+}
+
+/* Final Botones perzonalizados */
+

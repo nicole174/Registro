@@ -22,8 +22,10 @@ class CreateFormulariosTable extends Migration
             $table->string('experiencia')->nullable();
             $table->text('tipo_experiencia')->nullable();
             $table->string('vacante');
-            $table->unsignedBigInteger('id_document');
-            $table->foreign('id_document')->references('id')->on('documentos');
+            $table->string('path');
+            $table->string('document_name');
+            $table->unsignedBigInteger('id_user');
+            $table->foreign('id_user')->references('id')->on('users');
             $table->timestamps();
         });
     }

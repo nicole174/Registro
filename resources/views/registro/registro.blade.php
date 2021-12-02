@@ -13,59 +13,69 @@
                         <img src="{{url('img/GESDES.png')}}" class="img-fluid rounded-start" alt="usuarios.png">
                       </div>
                       <div class="col-md-8">
-                        <div class="card-body">
+                        <div class="registro card-body">
                           <h3 class="roboto card-title text-center">REGISTRO</h3>
 
                           <div class="card-body">
-                            <form method="POST" action="{{url('/usuarios')}}">
+                            <form method="POST" action="{{url('/usuario')}}">
                                 @csrf
                                 <div class="form-floating mb-3">
-                                    <input type="text" name="name" placeholder="Nombre completo..." class="form-control" autofocus>
+                                    <input type="text" name="name" placeholder="Nombre completo..." class="pill form-control" autofocus>
                                     <label for="name" class="usuario form-label">Nombre: </label>
-                                    {{-- @error('name') 
-                                    <div class="error">
-                                        <small>
-                                            {{$message}}
-                                        </small>
+                                    @error('name') 
+                                    <div class="row justify-content-center">
+                                        <div class="error error-w">
+                                            <small>
+                                                {{$message}}
+                                            </small>
+                                        </div>
                                     </div>
-                                    @enderror --}}
+                                    @enderror
                                 </div>
                                 <div class="form-floating mb-3">
-                                    <input type="text" name="email" placeholder="Correo electrónico..." class="form-control" autofocus>
+                                    <input type="text" name="email" placeholder="Correo electrónico..." class="pill form-control" autofocus>
                                     <label for="email" class="usuario form-label">Correo Electrónico:</label>
-                                    {{-- @error('email') 
-                                    <div class="error">
-                                        <small>
-                                            {{$message}}
-                                        </small>
+                                    @error('email') 
+                                    <div class="row justify-content-center">
+                                        <div class="error error-w">
+                                            <small>
+                                                {{$message}}
+                                            </small>
+                                        </div>
                                     </div>
-                                    @enderror --}}
+                                    @enderror
                                 </div>
                                 <div class="form-floating mb-3">
-                                    <input type="password" name="password" placeholder="Contraseña..." class="form-control">
+                                    <input type="password" name="password" placeholder="Contraseña..." class="pill form-control">
                                     <label for="password" class="usuario form-label"> Contraseña: </label>
-                                    {{-- @error('password') 
-                                    <div class="error">
-                                        <small>
-                                            {{$message}}
-                                        </small>
+                                    @error('password') 
+                                    <div class="row justify-content-center">
+                                        <div class="error error-w">
+                                            <small>
+                                                {{$message}}
+                                            </small>
+                                        </div>
                                     </div>
-                                    @enderror --}}
+                                    @enderror
                                 </div>
                                 <div class="form-floating mb-3">
-                                    <input type="password" name="password_confirmation" placeholder="Escribe de nuevo la contraseña..." class="form-control">
+                                    <input type="password" name="password_confirmation" placeholder="Escribe de nuevo la contraseña..." class="pill form-control">
                                     <label for="password_confirmation" class="usuario form-label"> Confirmar contraseña: </label>
-                                    {{-- @error('password') 
-                                    <div class="error">
-                                        <small>
-                                            {{$message}}
-                                        </small>
+                                    @error('password') 
+                                    <div class="row justify-content-center">
+                                        <div class="error error-w">
+                                            <small>
+                                                {{$message}}
+                                            </small>
+                                        </div>
                                     </div>
-                                    @enderror --}}
+                                    @enderror
                                 </div>
                                 <div class="boton text-center">
-                                    <a href="{{url('/')}}" class="btn btn-secondary">Cancelar</a>
-                                    <input type="submit" value="Guardar" class="btn btn-dark">
+                                    <div class="buttons">
+                                        <button class="btn-hover color-7"><a href="{{url('/')}}" style="text-decoration: none; color:#fff">Cancelar</a></button>
+                                        <button class="btn-hover color-8" type="submit">Registrarse</button>
+                                    </div>
                                 </div> 
                             </form>
                         </div>

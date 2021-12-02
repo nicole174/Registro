@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FormController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
@@ -17,4 +18,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [LoginController::class, 'index']);
 
+Route::post('/login', [LoginController::class, 'access']);
+
+Route::post('/salir', [LoginController::class, 'salir']);
+
 Route::get('/registro', [RegisterController::class, 'index']);
+
+Route::post('/usuario', [RegisterController::class, 'store']);
+
+Route::get('/formulario', [FormController::class, 'index']);
