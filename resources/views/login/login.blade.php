@@ -4,7 +4,7 @@
     
 @section('contenido')
 
-    <div class="container">
+    <div class="fondo-login container-fluid">
         <div class="login-box">
             <img class="avatar" src="{{url('img/G.jpeg')}}" alt="Gesdes.jpeg">
             <h1>LOGIN</h1>

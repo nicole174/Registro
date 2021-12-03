@@ -16,7 +16,7 @@ class CreateFormulariosTable extends Migration
         Schema::create('formularios', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->integer('phone');
+            $table->string('phone');
             $table->smallInteger('age');
             $table->string('escolaridad');
             $table->string('experiencia')->nullable();

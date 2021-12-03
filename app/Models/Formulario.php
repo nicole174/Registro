@@ -29,6 +29,12 @@ class Formulario extends Model
         'datetime' => 'datetime',
     ];
 
+    protected $attributes = [
+        'tipo_experiencia' => 'No',
+        'path' => 'hello',
+        'document_name' => 'bye',
+    ];
+
     public function User() {
         return $this->belongsTo(User::class, 'id_user');
     }

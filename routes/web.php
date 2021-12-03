@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [LoginController::class, 'index']);
+Route::get('/', [LoginController::class, 'index'])->middleware('guest');
 
 Route::post('/login', [LoginController::class, 'access']);
 
@@ -26,4 +26,6 @@ Route::get('/registro', [RegisterController::class, 'index']);
 
 Route::post('/usuario', [RegisterController::class, 'store']);
 
-Route::get('/formulario', [FormController::class, 'index']);
+Route::get('/formulario', [FormController::class, 'index'])->middleware('auth');
+
+Route::post('/llenado', [FormController::class, 'store']);
