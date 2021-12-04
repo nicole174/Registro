@@ -39,6 +39,6 @@ class FormController extends Controller
         
         $datos->save();
 
-        return redirect()->to('/formulario');
+        return redirect()->to('/formulario')->with('form', 'Se ha enviado correctamente tu Formulario.');
     }
 }

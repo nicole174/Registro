@@ -10,7 +10,7 @@
                 <div class="card form" >
                     <div class="row g-0">
                         <div class="img-registro col-md-4">
-                            <img src="{{url('img/G.jpeg')}}" class="img-fluid rounded-start" alt="usuarios.png" style="border-radius: 100px">
+                            <img src="{{url('img/ges.png')}}" class="img-fluid rounded-start" alt="usuarios.png" style="border-radius: 100px">
                         </div>
                         <div class="col-md-8">
                             <div class="registro card-body">

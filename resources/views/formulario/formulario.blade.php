@@ -8,8 +8,13 @@
         <div class="row justify-content-end">
             <form method="POST" action="{{url('/salir')}}">
                 @csrf
-                <div class=" salir row justify-content-end">
-                    <button class="btn-hover color-11">SALIR <i class="fas fa-sign-out-alt"></i></button>
+                <div class="salir row justify-content-end">
+                    <button class="aguacate">
+                        <span>
+                            SALIR <i class="fas fa-sign-out-alt"></i>
+                        </span>
+                        <div class="liquid"></div>
+                    </button>
                 </div>
             </form>
         </div>
@@ -18,12 +23,18 @@
                 <div class="card form" >
                     <div class="row g-0">
                         <div class="img-form col-md-4">
-                            <img src="{{url('img/G.jpeg')}}" class="img-fluid rounded-start" alt="usuarios.png" style="border-radius: 100px">
+                            <img src="{{url('img/ges.png')}}" class="img-fluid rounded-start" alt="usuarios.png" style="border-radius: 100px">
                         </div>
                         <div class="col-md-8">
                             <div class="formulario card-body">
                                 <h3 class="roboto card-title text-center">FORMULARIO</h3>
-                                
+                                <div class="row justify-content-center">
+                                    @if (session('form'))
+                                    <div class="envio">
+                                        <p>{{session('form')}}</p>
+                                    </div>
+                                @endif
+                                </div>
                                 <div class="card-body">
                                     <form method="POST" action="{{url('/llenado')}}">
                                         @csrf

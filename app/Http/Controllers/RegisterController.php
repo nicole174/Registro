@@ -30,6 +30,6 @@ class RegisterController extends Controller
 
         $usuarios->save();
 
-        return redirect()->to('/formulario');
+        return redirect()->to('/')->with('status', 'Registro exitoso. Ya puedes iniciar sesión.');
     }
 }
