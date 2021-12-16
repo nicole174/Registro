@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Formulario;
+use Exception;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class FormController extends Controller
 {
@@ -22,22 +24,39 @@ class FormController extends Controller
             'experiencia' => 'required',
             'tipo_experiencia',
             'vacante' => 'required',
+            'cv' => 'required|pdf|max:2048',
             
         ]);
 
-        $datos = new Formulario();
+        /* try{
+            DB::beginTransaction(); */
 
-        $datos->name = $request->get('name');
-        $datos->phone = $request->get('phone');
-        $datos->age = $request->get('age');
-        $datos->escolaridad = $request->get('escolaridad');
-        $datos->experiencia = $request->get('experiencia');
-        $datos->tipo_experiencia = $request->get('tipo_experiencia');
-        $datos->vacante = $request->get('vacante');
+            $datos = new Formulario();
 
-        $datos->id_user = auth()->user()->id;
-        
-        $datos->save();
+            $datos->name = $request->get('name');
+            $datos->phone = $request->get('phone');
+            $datos->age = $request->get('age');
+            $datos->escolaridad = $request->get('escolaridad');
+            $datos->experiencia = $request->get('experiencia');
+            $datos->tipo_experiencia = $request->get('tipo_experiencia');
+            $datos->vacante = $request->get('vacante');
+
+            $datos->id_user = auth()->user()->id;
+
+            $name = $request->file('cv')->getClientOriginalName();
+ 
+            $path = $request->file('cv')->store('public/files');
+
+    
+            $datos->document_name = $name;
+            $datos->path = $path;
+
+
+            $datos->save();
+            /* DB::commit();  
+        } catch(Exception $e) {
+            return redirect()->to('/formulario')->with('form', 'Tu formulario no estaba completo.');
+        } */
 
         return redirect()->to('/formulario')->with('form', 'Se ha enviado correctamente tu Formulario.');
     }

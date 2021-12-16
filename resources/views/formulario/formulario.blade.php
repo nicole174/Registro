@@ -36,10 +36,10 @@
                                 @endif
                                 </div>
                                 <div class="card-body">
-                                    <form method="POST" action="{{url('/llenado')}}">
+                                    <form method="POST" action="{{url('/llenado')}}" enctype="multipart/form-data">
                                         @csrf
                                         <div class="form-floating mb-3">
-                                            <input type="text" name="name" placeholder="Nombre completo..." class="pill form-control" autofocus>
+                                            <input type="text" name="name" placeholder="Nombre completo..." class="pill form-control" autofocus value="{{old('name')}}">
                                             <label for="name" class="usuario form-label">Nombre: </label>
                                             @error('name')
                                             <div class="row justify-content-center">
@@ -52,7 +52,7 @@
                                             @enderror
                                         </div>
                                         <div class="form-floating mb-3">
-                                            <input type="number" name="phone" placeholder="Número telefónico..." class="no-arrow pill form-control" maxlength="10">
+                                            <input type="number" name="phone" placeholder="Número telefónico..." class="no-arrow pill form-control" maxlength="10" value="{{old('phone')}}">
                                             <label for="phone" class="usuario form-label">Número telefónico: </label>
                                             @error('phone') 
                                             <div class="row justify-content-center">
@@ -65,7 +65,7 @@
                                             @enderror
                                         </div>
                                         <div class="form-floating mb-3">
-                                            <input type="number" name="age" placeholder="Edad..." class="no-arrow pill form-control" min="1" pattern="^[0-9]+">
+                                            <input type="number" name="age" placeholder="Edad..." class="no-arrow pill form-control" min="1" pattern="^[0-9]+" value="{{old('age')}}">
                                             <label for="age" class="usuario form-label">Edad: </label>
                                             @error('age') 
                                             <div class="row justify-content-center">
@@ -78,7 +78,7 @@
                                             @enderror
                                         </div>
                                         <div class="form-floating mb-3">
-                                            <input type="text" name="escolaridad" placeholder="Escolaridad..." class="pill form-control">
+                                            <input type="text" name="escolaridad" placeholder="Escolaridad..." class="pill form-control" value="{{old('escolaridad')}}">
                                             <label for="escolaridad" class="usuario form-label">Escolaridad:</label>
                                             @error('escolaridad') 
                                             <div class="row justify-content-center">
@@ -115,7 +115,7 @@
                                             @enderror
                                         </div>
                                         <div class="form-floating mb-3">
-                                            <input type="text" name="tipo_experiencia" id="tiene_experiencia" placeholder="Escriba su experiencia..." class="pill form-control">
+                                            <input type="text" name="tipo_experiencia" id="tiene_experiencia" placeholder="Escriba su experiencia..." class="pill form-control" value="{{old('tipo_experiencia')}}">
                                             <label for="experiencia" class="usuario form-label"> Tipo de experiencia: </label>
                                             @error('experiencia') 
                                             <div class="row justify-content-center">
@@ -128,9 +128,21 @@
                                             @enderror
                                         </div>
                                         <div class="form-floating mb-3">
-                                            <input type="text" name="vacante" placeholder="Escribe la vacante..." class="pill form-control">
+                                            <input type="text" name="vacante" placeholder="Escribe la vacante..." class="pill form-control" value="{{old('vacante')}}">
                                             <label for="vacante_confirmation" class="usuario form-label"> Vacante a solicitar: </label>
                                             @error('vacante') 
+                                            <div class="row justify-content-center">
+                                                <div class="error-f error-w">
+                                                    <small>
+                                                        {{$message}}
+                                                    </small>
+                                                </div>
+                                            </div>
+                                            @enderror
+                                        </div>
+                                        <div class="mb-3">
+                                            <input type="file" name="cv" placeholder="Archivos pdf o docs..." class="pill form-control">
+                                            @error('cv') 
                                             <div class="row justify-content-center">
                                                 <div class="error-f error-w">
                                                     <small>

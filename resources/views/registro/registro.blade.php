@@ -6,10 +6,10 @@
 
     <div class="fondo-register container-fluid ml-5">
         <div class="vh-100 row justify-content-center align-items-center">
-            <div class="usuarios mt-4 col-md-8">
+            <div class="usuarios mt-4 col-lg-8 col-xl-6 col-md-8">
                 <div class="card form" >
                     <div class="row g-0">
-                        <div class="img-registro col-md-4">
+                        <div class="img-registro col-lg-4 col-md-4">
                             <img src="{{url('img/ges.png')}}" class="img-fluid rounded-start" alt="usuarios.png" style="border-radius: 100px">
                         </div>
                         <div class="col-md-8">
@@ -73,7 +73,7 @@
                                         </div>
                                         <div class="boton text-center">
                                             <div class="buttons">
-                                                <button class="btn-hover color-7"><a href="{{url('/')}}" style="text-decoration: none; color:#fff">Cancelar</a></button>
+                                                <div class="cancelar btn-hover color-7"><a href="{{url('/')}}" style="text-decoration: none; color:#fff">Cancelar</a></div>
                                                 <button class="btn-hover color-8" type="submit">Registrarse</button>
                                             </div>
                                         </div> 

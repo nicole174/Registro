@@ -137,5 +137,7 @@ return [
         'name' => 'nombre', 
         'password' => 'contraseña',
         'email' => 'correo electrónico',
+        'phone' => 'teléfono',
+        'age' => 'edad',
     ]
 ];
