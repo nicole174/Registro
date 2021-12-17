@@ -25,6 +25,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'tipo',
     ];
 
     /**
@@ -43,6 +44,10 @@ class User extends Authenticatable
      */
     protected $casts = [
         'datetime' => 'datetime',
+    ];
+
+    protected $attributes = [
+        'tipo' => 0,
     ];
 
     public function Formulario() {

@@ -139,5 +139,6 @@ return [
         'email' => 'correo electrónico',
         'phone' => 'teléfono',
         'age' => 'edad',
+        'cv' => 'Documento',
     ]
 ];

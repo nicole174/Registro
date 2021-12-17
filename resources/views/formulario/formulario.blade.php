@@ -40,7 +40,7 @@
                                         @csrf
                                         <div class="form-floating mb-3">
                                             <input type="text" name="name" placeholder="Nombre completo..." class="pill form-control" autofocus value="{{old('name')}}">
-                                            <label for="name" class="usuario form-label">Nombre: </label>
+                                            <label for="name" class="usuario form-label">Nombre Completo: </label>
                                             @error('name')
                                             <div class="row justify-content-center">
                                                 <div class="error-f error-w">

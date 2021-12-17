@@ -21,7 +21,14 @@ class LoginController extends Controller
         ]);
 
         if(Auth::attempt($credenciales)){
-            return $redirect->to('/formulario');
+            /* dd(auth()->user()->tipo); */
+
+            if(auth()->user()->tipo == 1){
+                return $redirect->to('/administrador');
+            }else{
+                return $redirect->to('/formulario');
+            }
+            
         }
         return back()->withErrors([
             'email' => 'El correo o la contraseña no son correctos.',

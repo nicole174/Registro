@@ -24,7 +24,7 @@ class FormController extends Controller
             'experiencia' => 'required',
             'tipo_experiencia',
             'vacante' => 'required',
-            'cv' => 'required|pdf|max:2048',
+            'cv' => 'required|mimes:pdf,docx|max:2048',
             
         ]);
 

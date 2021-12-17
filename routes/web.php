@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\FormController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
@@ -29,3 +30,5 @@ Route::post('/usuario', [RegisterController::class, 'store']);
 Route::get('/formulario', [FormController::class, 'index'])->middleware('auth');
 
 Route::post('/llenado', [FormController::class, 'store']);
+
+Route::get('/administrador', [AdminController::class, 'index']);

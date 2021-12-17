@@ -31,7 +31,6 @@ class Formulario extends Model
 
     protected $attributes = [
         'tipo_experiencia' => 'No',
-        'path' => 'hello',
     ];
 
     public function User() {
