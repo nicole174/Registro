@@ -13,4 +13,9 @@ class AdminController extends Controller
 
         return view('admin.admin')->with(['registros'=>$registros]);
     }
+
+    public function descarga($documento) {
+
+        return response()->download(storage_path('app/public/'.$documento));
+    }
 }

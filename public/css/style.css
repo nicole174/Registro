@@ -163,6 +163,14 @@ height: 100vh;
   font-weight: bolder;
 }
 
+.cancelar-btn {
+  padding-top: 7px;
+}
+
+.experiencia {
+  margin-left: -320px;
+}
+
 
 /* Finaliza css general*/
 
@@ -294,9 +302,6 @@ height: 100vh;
 
 /* Inicio Botones perzonalizados */
 
-.buttons {
-  text-align: center;
-}
 
 .btn-hover {
   width: 125px;
@@ -348,80 +353,95 @@ height: 100vh;
 
 /* Inicio de boton-radio */
 
-.rad-label {
+.main_wrapper {
+  position:relative;
+  width: 500;
+  height: 150px;
+  padding-left: 70px;
+  border-radius: 15px;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.082);
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-
-  border-radius: 100px;
-  padding: 14px 16px;
-  margin: 10px 0;
-
-  cursor: pointer;
-  transition: .3s;
+  background-color: #fff;
 }
 
-.rad-label:hover,
-.rad-label:focus-within {
-  background: hsla(0, 0%, 80%, .14);
-}
-
-.rad-input {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 1px;
-  height: 1px;
-  opacity: 0;
-  z-index: -1;
-}
-
-.rad-design {
-  width: 22px;
-  height: 22px;
-  border-radius: 100px;
-
-  background: linear-gradient(to right bottom, hsl(154, 97%, 62%), hsl(225, 97%, 62%));
+.buttons_wrapper {
+  width: 160px;
+  height: auto;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
 }
 
-.rad-design::before {
-  content: '';
-
-  display: inline-block;
-  width: inherit;
-  height: inherit;
-  border-radius: inherit;
-
-  background: hsl(0, 0%, 90%);
-  transform: scale(1.1);
-  transition: .3s;
+input {
+  display: none;
 }
 
-.rad-input:checked+.rad-design::before {
-  transform: scale(0);
+.entry {
+  position: relative;
+  width: 100%;
+  transition: .5s;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 10px;
 }
 
-.rad-text {
-  color: hsl(0, 0%, 60%);
-  margin-left: 14px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  font-size: 18px;
-  font-weight: 900;
-
-  transition: .3s;
+.circle {
+  border: 3px solid #cacaca;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 32px;
+  width: 32px;
+  top: 50%;
+  transition: border-color .5s;
 }
 
-.rad-input:checked~.rad-text {
-  color: hsl(0, 0%, 40%);
+.entry-label {
+  cursor: pointer;
+  user-select: none;
+  -moz-user-select: none;
+  font-weight: 500;
+  padding-left: 15px;
 }
 
-.abs-site-link {
-  position: fixed;
-  bottom: 40px;
-  left: 20px;
-  color: hsla(0, 0%, 0%, .5);
-  font-size: 16px;
+.highlight {
+  background: #2093ff;
+  border-radius: 50%;
+  height: 18px;
+  width: 18px;
+  top: 19px;
+  left: 7px;
+  pointer-events: none;
+  position: absolute;
+  transition: all .3s cubic-bezier(0.175, 0.885, 0.320, 1.275);
+  transform: translateY(-55px);
+}
+
+input:nth-child(1):checked ~ .highlight {
+  transform: translateY(0);
+}
+
+input:nth-child(3):checked ~ .highlight {
+  transform: translateY(55px);
+}
+
+input:nth-child(5):checked ~ .highlight {
+  transform: translateY(110px);
+}
+
+input:checked + .entry .circle {
+  border-color: #2093ff;
+  color: #2093ff;
+}
+
+input:checked + .entry {
+  color: #2093ff;
 }
 
 /* Finaliza boton-radio */

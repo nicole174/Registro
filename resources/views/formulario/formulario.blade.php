@@ -91,7 +91,19 @@
                                             @enderror
                                         </div>
                                         <div class="form-floating mb-3">
-                                            <div class="radio">
+                                            <div class="main_wrapper">
+                                                <p class="experiencia">¿Cúentas con experiencia?</p>
+                                                <div class="buttons_wrapper">
+                                                    <input type="radio" name="experiencia" id="input1" value="si">
+                                                    <label class="entry" for="input1"><div class="circle"></div><div class="entry-label">Si</div></label>
+
+                                                    <input type="radio" name="experiencia" id="input2" value="no">
+                                                    <label class="entry" for="input2"><div class="circle"></div><div class="entry-label">No</div></label>
+
+                                                    <div class="highlight"></div>
+                                                </div>
+                                            </div>
+                                            {{-- <div class="radio">
                                                 <p>¿Cúentas con experiencia?</p>
                                                 <label class="rad rad-label">
                                                     <input type="radio" class="rad-input" id="si" name="experiencia" value="si">
@@ -103,7 +115,7 @@
                                                     <div class="rad-design"></div>
                                                     <div class="rad-text">No</div>
                                                 </label>
-                                            </div>
+                                            </div> --}}
                                             @error('experiencia') 
                                             <div class="row justify-content-center">
                                                 <div class="error-f error-w">
@@ -168,8 +180,8 @@
     </div>
 
     <script>
-       let discounted = document.getElementById('no');
-       let no_discounted = document.getElementById('si')
+       let discounted = document.getElementById('input2');
+       let no_discounted = document.getElementById('input1')
        let discount_percentage = document.getElementById('tiene_experiencia')
 
         function updateStatus() {

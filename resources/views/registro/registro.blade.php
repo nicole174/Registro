@@ -71,9 +71,9 @@
                                             </div>
                                             @enderror
                                         </div>
-                                        <div class="boton text-center">
-                                            <div class="buttons">
-                                                <div class="cancelar btn-hover color-7"><a href="{{url('/')}}" style="text-decoration: none; color:#fff">Cancelar</a></div>
+                                        <div class="boton">
+                                            <div class="row justify-content-center">
+                                                <div class="cancelar-btn btn-hover color-7"><a class="cancelar" href="{{url('/')}}" style="text-decoration: none; color:#fff">Cancelar</a></div>
                                                 <button class="btn-hover color-8" type="submit">Registrarse</button>
                                             </div>
                                         </div> 

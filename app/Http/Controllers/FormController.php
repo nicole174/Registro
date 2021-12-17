@@ -6,6 +6,7 @@ use App\Models\Formulario;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 class FormController extends Controller
 {
@@ -24,7 +25,7 @@ class FormController extends Controller
             'experiencia' => 'required',
             'tipo_experiencia',
             'vacante' => 'required',
-            'cv' => 'required|mimes:pdf,docx|max:2048',
+            'cv' => 'required|mimes:pdf,docx|max:10240',
             
         ]);
 
@@ -45,7 +46,7 @@ class FormController extends Controller
 
             $name = $request->file('cv')->getClientOriginalName();
  
-            $path = $request->file('cv')->store('public/files');
+            $path = Storage::putFileAs('public', $request->file('cv'), $name);
 
     
             $datos->document_name = $name;

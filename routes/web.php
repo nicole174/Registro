@@ -32,3 +32,5 @@ Route::get('/formulario', [FormController::class, 'index'])->middleware('auth');
 Route::post('/llenado', [FormController::class, 'store']);
 
 Route::get('/administrador', [AdminController::class, 'index']);
+
+Route::get('/descarga/{documento}', [AdminController::class, 'descarga'])->name('download');

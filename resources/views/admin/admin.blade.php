@@ -37,7 +37,7 @@
                                 <td>{{$registro->name}}</td>
                                 <td>{{$registro->phone}}</td>
                                 <td>{{$registro->vacante}}</td>
-                                <td><a class="btn btn-danger" href="{{$registro->path}}" target="_blank">{{$registro->document_name}}</a></td>
+                                <td><a class="btn btn-danger" href="{{route('download', $registro->document_name)}}">{{$registro->document_name}}</a></td>
                             </tr>
                         @endforeach
                     </tbody>
