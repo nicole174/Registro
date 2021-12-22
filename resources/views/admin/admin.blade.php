@@ -22,7 +22,7 @@
         <div class="row justify-content-center mt-4">
             <div class="col-md-10">
                 <h1 class="titulo-cv text-center mb-4">Registros de CV:</h1>
-                <table class="table table-striped table-light">
+                <table class="table table-striped table-light text-center">
                     <thead>
                         <tr>
                             <th>NOMBRE</th>
@@ -42,6 +42,9 @@
                         @endforeach
                     </tbody>
                 </table>
+                    <div class=" d-flex justify-content-end">
+                        {!!$registros->links()!!}
+                    </div>
             </div>
         </div>
     </div>
